@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app6.MainPage">
+
+
+    <StackLayout BackgroundColor="Black">
+
+        <StackLayout Orientation="Horizontal">
+            <ImageButton Source="Logo.png" Clicked="Button_Clicked"/>
+            <ImageButton Source="Home_selected.png"/>
+            <ImageButton Source="Notifications_selected.png"/>
+            <ImageButton Source="Messages.png"/>
+            
+        </StackLayout>
+        <Image x:Name="resultImage"/>
+        <CollectionView x:Name="collectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding .}"/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+
+</ContentPage>
