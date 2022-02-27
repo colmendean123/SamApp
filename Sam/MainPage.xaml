@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sam.MainPage">
+
+    <StackLayout>
+
+        <Button Text="Add Images" Clicked="Button_Clicked"/>
+        <Button Text="Add Videos" Clicked="Button_Clicked_1"/>
+        <Image x:Name="resultImage"/>
+        <CollectionView x:Name="collectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding .}"/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            
+        </CollectionView>
+         
+    </StackLayout>
+
+</ContentPage>
